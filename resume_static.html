@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Astha Gupta - Resume</title>
   <style>
     body {
       font-family: 'Georgia', 'Times New Roman', serif;
       margin: 40px auto;
+      padding: 0 20px;
       max-width: 850px;
       color: #1a1a1a;
       line-height: 1.6;
+    }
+    a {
+      color: #2c3e50;
     }
     .header {
       text-align: center;
@@ -34,7 +39,6 @@
       color: #333;
     }
     p.contact a {
-      color: #2c3e50;
       text-decoration: none;
     }
     h2 {
@@ -52,8 +56,13 @@
       font-weight: 600;
       display: flex;
       justify-content: space-between;
+      gap: 16px;
       margin: 12px 0 4px 0;
       color: #34495e;
+    }
+    h3 .date {
+      flex-shrink: 0;
+      font-weight: 400;
     }
     .subtitle {
       font-size: 13px;
@@ -97,12 +106,13 @@
   <!-- Header -->
   <div class="header">
     <h1>Astha Gupta</h1>
-    <p class="tagline">Masters in Statistics & Data Science</p>
-    <p class="tagline">Ludwig Maximilian University, Munich, Germany</p>
+    <p class="tagline">MSc Statistics &amp; Data Science</p>
+    <p class="tagline">Ludwig Maximilian University of Munich, Germany</p>
     <p class="contact">
-      <a href="mailto:astha.gupta@campus.lmu.de">astha.gupta@campus.lmu.de</a> | 
-      <a href="https://github.com/Asthag29" target="_blank">github.com/Asthag29</a> | 
-      <a href="https://www.linkedin.com/in/astha-gupta-772878219/" target="_blank">LinkedIn</a>
+      <a href="mailto:astha.gupta@campus.lmu.de">astha.gupta@campus.lmu.de</a> |
+      <a href="https://github.com/Asthag29" target="_blank" rel="noopener">github.com/Asthag29</a> |
+      <a href="https://huggingface.co/Pastaaaaa2003" target="_blank" rel="noopener">Hugging Face</a> |
+      <a href="https://www.linkedin.com/in/astha-gupta-772878219/" target="_blank" rel="noopener">LinkedIn</a>
     </p>
   </div>
 
@@ -110,119 +120,116 @@
   <div class="section">
     <h2>Introduction</h2>
     <p>
-      My name is Astha (Faith). I started my degree in Data Science with zero idea of what it actually was.
-      Between multiple breakdowns and lectures, I slowly started enjoying it. Now, I work at the university in
-      the Mathematics and AI Department, work on multiple projects, and in my spare time experiment with makeup,
-      fashion, and sewing. Recently, I was also awarded the LMU SIST Completion Scholarship.
+      I am a master's student in Statistics and Data Science at LMU Munich. I am currently exploring several
+      domains. I have worked with diffusion models, neural operators, OCR, and language models. My current
+      interest is leaning towards audio and speech modelling.
     </p>
-  </div>
-
-  <!-- Research Interests -->
-  <div class="section">
-    <h2>Research Interests</h2>
-    <p>
-      My research interests are pretty diverse, but mainly involve work at the intersection of mathematics and
-      machine learning. My current focus is in the domain of computer vision, specifically generative modeling and
-      diffusion models. I also enjoy working on large language models and NLP tasks. I am still exploring multiple
-      directions, and would love to contribute to new ideas and projects.
-    </p>
-  </div>
-
-  <!-- Education -->
-  <div class="section">
-    <h2>Education</h2>
-    
-    <h3>Masters in Statistics & Data Science <span>2024 – Present</span></h3>
-    <p class="subtitle">Ludwig Maximilian University, Munich, Germany</p>
-
-    <h3>Bachelor of Science in Statistics (Honours) <span>2021 – 2024</span></h3>
-    <p class="subtitle">University of Delhi, New Delhi, India</p>
-    <p class="grade">CGPA: 8.546</p>
-    was in top 3 of my batch
-
-    <h3>High School <span>2018 – 2021</span></h3>
-    <p class="subtitle">St. Joseph Academy, New Delhi, India</p>
-    <p class="grade">Percentage: 96%</p>
   </div>
 
   <!-- Work Experience -->
   <div class="section">
     <h2>Work Experience</h2>
-    
-    <h3>Research Student <span>August 2025 – Present</span></h3>
-    <p class="subtitle">Chair of Mathematical Foundations of Artificial Intelligence, LMU Munich</p>
+
+    <h3><span>Research Student, <a href="https://www.ai.math.uni-muenchen.de/index.html">Chair of Mathematical Foundations of Artificial Intelligence</a>, LMU Munich</span> <span class="date">August 2025 – Present</span></h3>
+    <p class="subtitle">
+      <a href="https://www.math.lmu.de/~kutyniok/">Prof. Gitta Kutyniok</a>,
+      supervised by <a href="https://cbuelt.github.io">Christopher Bülte</a>
+    </p>
     <ul>
-      <li>Developing models which could improve the prediciton of PDEs using diffusion models and neural operators.</li>
-      <li>Implementing uncertainty quantification methods to measure model confidence</li>
+      <li>Combining diffusion models with neural operators to improve the prediction of PDE solutions.</li>
+      <li>Implementing uncertainty quantification so the model reports its confidence alongside the prediction.</li>
     </ul>
 
-    <h2>Work Experience</h2>
-    
-    <h3>Research Student <span>February 2026 – Present</span></h3>
-    <p class="subtitle">NOMOS Group, LMU Munich</p>
-   
+    <h3><span>Research Student, <a href="https://www.byzantinistik.uni-muenchen.de/forschung/projekte/probyz/nomos/index.html">NOMOS Group</a>, LMU Munich</span> <span class="date">February 2026 – Present</span></h3>
+    <p class="subtitle">
+      <a href="https://www.kw.lmu.de/byz/de/personen/kontaktseite/zachary-chitwood-e1b99c14.html">Prof. Dr. Zachary Chitwood</a>,
+      <a href="https://www.cas.lmu.de/de/personen-am-cas/details/andreas-bender-fcbcf64c.html">Dr. Andreas Bender</a>
+    </p>
     <ul>
-      <li>Developing a machine learning pipeline which could transcribe texts from old Byzantinze Greek Manuscripsts using OCR and vision language models</li>
-      <li>Working with Professor Dr. Zachary Chitwood and Dr. Andreas Bender</li>
-      <li></li>
+      <li>Building a small OCR model that transcribes medieval handwritten text in Greek, Syriac, Coptic, and Armenian.</li>
+      <li>The current model has under 3M parameters and reaches state-of-the-art or comparable performance against the best available open source OCR models.</li>
+      <li>Application: <a href="https://www.nomikos.app">nomikos.app</a> ·
+        GitHub: <a href="https://github.com/kkkamur07/nomikos">github.com/kkkamur07/nomikos</a> ·
+        Hugging Face: <a href="https://huggingface.co/nomikos-project">huggingface.co/nomikos-project</a></li>
     </ul>
   </div>
 
   <!-- Projects -->
   <div class="section">
     <h2>Projects</h2>
-    
-    <h3>Stable Diffusion Model <span>January 2025 – Present</span></h3>
-    <p class="subtitle">Munich, Germany</p>
-    <p class="project-meta">Self learning purpose</p>
+
+    <h3><span>Hindi LLaMA-Omni: a Hindi speech-to-speech assistant</span> <span class="date">October 2025 – October 2026</span></h3>
+    <p class="subtitle">Applied deep learning project with Prof. Mina Rezaei</p>
+    <p class="project-meta">
+      1× A100 80 GB · 9.02 B parameters, 357 M trained · 35–40 hours of training ·
+      <a href="https://github.com/Asthag29/llama_omni_hindi_">code</a> ·
+      <a href="https://huggingface.co/Pastaaaaa2003/hindi-llama-omni-model">model</a> ·
+      <a href="https://huggingface.co/datasets/Pastaaaaa2003/Hindi-speech-instruct">dataset</a>
+    </p>
+    <p>
+      An audio chatbot for the Hindi language. The recipe has three main ingredients: a speech encoder
+      (Whisper large-v3), a speech adaptor that learns the correspondence between speech tokens and text
+      tokens, and a backbone language model (Llama 8B). The model is built on top of LLaMA-Omni.
+    </p>
     <ul>
-      <li><strong>Objective:</strong> Implemented stable diffusion model from scratch to understand underlying mechanics and architecture</li>
-      <li><strong>Learnings:</strong> Gained deep understanding of DDPM and DDIM samplers, along with comprehensive knowledge of CLIP and autoencoding architectures</li>
+      <li><strong>Dataset:</strong> No spoken-Hindi instruction data existed, so I built Hindi-speech-instruct: 110,700 AI4Bharat Indic-Instruct conversations with every question synthesised to 16 kHz speech (158 GB, CC BY 4.0).</li>
+      <li><strong>Training:</strong> Training was done in two stages: the first stage trains the LoRA adaptors on 102k Hindi text conversations, and the second stage trains the speech adaptor on 49,787 spoken questions (160 hours).</li>
+      <li><strong>Results</strong> against the base model: IndicQA (question answering) F1 34% → 68%, <strong>perplexity 13.2 → 7.7</strong>; MT-Bench-Hi (conversation) 3.5 → 4.6 out of 10; IFEval-Hi (instruction following) 19.6% → 24.4%. Gains in question answering, writing and extraction; math and coding slightly worse.</li>
     </ul>
 
-    <h3>Hindi LLama Omni Model <span>October 2025 – Present</span></h3>
-    <p class="subtitle">Munich, Germany</p>
-    <p class="project-meta">Ongoing side project</p>
+    <h3><span>Stable Diffusion from scratch</span> <span class="date">2025</span></h3>
+    <p class="project-meta"><a href="https://github.com/Asthag29/Stable_Diffusion">code</a></p>
     <ul>
-      <li><strong>Objective:</strong> Building a Hindi speech-to-speech model inspired by the architecture of the Llama Omni model</li>
-      <li><strong>Learnings:</strong> The goal is to build a system which could understand and talk back to the user in Hindi, with the main focus on reducing latency</li>
+      <li><strong>Goal:</strong> A learning implementation of the Stable Diffusion pipeline, written to understand the architecture and the mathematics behind how noise turns into an image.</li>
+      <li><strong>Approach:</strong> I coded everything following Umar Jamil's repository. The main components of the model are the CLIP text encoder, the VAE encoder and decoder, the U-Net denoiser with its attention blocks, and DDPM sampling. Without the compute to train it, I loaded the pretrained v1.5 weights into my implementation.</li>
+      <li>One of my most interesting and insightful projects, where everything I had learnt (architectures, sampling techniques, embedding spaces) came together.</li>
     </ul>
 
-    <h3>Transformer <span>June 2024 – September 2024</span></h3>
-    <p class="subtitle">Munich, Germany</p>
-    <p class="project-meta">Theorey focused project</p>
+    <h3><span>Fourier epicycles from any image</span> <span class="date">2024</span></h3>
+    <p class="project-meta">
+      <a href="https://huggingface.co/spaces/Pastaaaaa2003/Fourier_face">live demo</a> ·
+      <a href="https://github.com/Asthag29/Fourier_Transformation">code</a>
+    </p>
     <ul>
-      <li><strong>Objective:</strong> Coded transformer architecture to understand its major components including self-attention, cross-attention encoder-decoder mechanisms, etc.</li>
-      <li><strong>Learnings:</strong> Understood the mathematics behind the transformer architecture and wrote detailed explanations for each components in the repository</li>
+      <li><strong>Goal:</strong> Most websites that show Fourier epicycles need you to draw the shape by hand or supply an SVG file, and neither works well for real images. I wanted to extend the idea to real images.</li>
+      <li><strong>How it works:</strong> Four stages. Edge detection finds the boundaries in the image. A nearest-neighbour traversal orders the scattered edge points into a single connected path. A spline smooths that path and draws the outline of the image. A Fourier transform then turns the path into rotating circles.</li>
+      <li><strong>Limitations:</strong> It works reasonably well on cartoons, high-contrast images and portraits, but falls apart on natural images. The fix would be to replace the edge-based approach with a single-stroke tracing algorithm (which I am looking into).</li>
     </ul>
 
-    <h3>Drawing Sketches using Fourier Transformation <span>February 2024 – May 2024</span></h3>
-    <p class="subtitle">Munich, Germany</p>
-    <p class="project-meta">was inspired from https://www.jezzamon.com/fourier/ but wanted to extend it for human skeaches</p>
+    <h3><span>Some older projects</span></h3>
     <ul>
-      <li><strong>Objective:</strong> Developed end-to-end pipeline for drawing contours of human faces using Fourier Transformation</li>
-      <li><strong>Learnings:</strong> Applied edge detection techniques, parametric spline fitting, Fourier Transformation, and JavaScript for frontend development</li>
-      <li><strong>Future Goal:</strong>website is live on : https://astha-fourier.netlify.app/</li>
+      <li><a href="https://github.com/Asthag29/NANO_GPT">Decoder-only transformer</a> (2024). Character-level GPT on Tiny Shakespeare, built up from a bigram baseline.</li>
+      <li><a href="https://github.com/Asthag29/NEURAL_NET_SCRATCH_OPTIMIZATION">Backpropagation and optimisers in NumPy</a> (2025). I wanted to understand the mathematics behind backpropagation and optimisation algorithms, so I implemented everything and compared the performance of SGD with momentum, AdaGrad, RMSprop and Adam on the MNIST dataset.</li>
     </ul>
+  </div>
 
+  <!-- Education -->
+  <div class="section">
+    <h2>Education</h2>
+
+    <h3><span>MSc Statistics &amp; Data Science</span> <span class="date">2024 – Present</span></h3>
+    <p class="subtitle">Ludwig Maximilian University of Munich, Germany</p>
+    <p class="grade">LMU SIST Completion Scholarship</p>
+
+    <h3><span>BSc Statistics (Honours)</span> <span class="date">2021 – 2024</span></h3>
+    <p class="subtitle">University of Delhi, New Delhi, India</p>
+    <p class="grade">CGPA: 8.546, 3rd in batch</p>
+
+    <h3><span>High School</span> <span class="date">2018 – 2021</span></h3>
+    <p class="subtitle">St. Joseph Academy, New Delhi, India</p>
+    <p class="grade">Percentage: 96%</p>
   </div>
 
   <!-- Skills -->
   <div class="section">
     <h2>Technical Skills</h2>
-    <ul>
-      <li>Large Language Models and Generative AI</li>
-      <li>Neural Networks and Deep Learning</li>
-      <li>Python, R Programming, JavaScript</li>
-      <li>Theoretical Deep Learning</li>
-      <li>Mathematics and Optimization</li>
-    </ul>
+    <p>PyTorch, PyTorch Lightning, Hugging Face, LoRA/PEFT, Hydra, Weights &amp; Biases, NumPy, OpenCV, FastAPI, Gradio, Python, R, JavaScript.</p>
   </div>
 
   <!-- Languages -->
   <div class="section">
     <h2>Languages</h2>
-    <p>English (Fluent), Hindi (Native)</p>
+    <p>Hindi, English.</p>
   </div>
 
 </body>
