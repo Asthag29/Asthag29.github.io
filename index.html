@@ -55,8 +55,8 @@
   </div>
 
   <p>
-    I am a master's student in Statistics and Data Science at LMU Munich. I have been exploring several
-    domains: I have worked with diffusion models, neural operators, OCR, and language models. My current
+    I am a master's student in Statistics and Data Science at LMU Munich. I am currently exploring several
+    domains. I have worked with diffusion models, neural operators, OCR, and language models. My current
     interest is leaning towards audio and speech modelling.
   </p>
 
@@ -78,7 +78,7 @@
   <p>
     Building a small OCR model that transcribes medieval handwritten text in Greek, Syriac, Coptic, and
     Armenian. The current model has under 3M parameters and reaches state-of-the-art or comparable
-    performance against the best available models.
+    performance against the best available open source OCR models.
   </p>
   <ul class="small">
     <li>Application: <a href="https://www.nomikos.app">nomikos.app</a></li>
@@ -97,31 +97,36 @@
   <p>
     An audio chatbot for the Hindi language. The recipe has three main ingredients: a speech encoder
     (Whisper large-v3), a speech adaptor that learns the correspondence between speech tokens and text
-    tokens, and a backbone language model (Llama 3.1 8B). The model is built on top of LLaMA-Omni.
+    tokens, and a backbone language model (Llama 8B). The model is built on top of LLaMA-Omni.
   </p>
   <ul>
     <li><b>Dataset.</b> No spoken-Hindi instruction data existed, so I built Hindi-speech-instruct: 110,700
       AI4Bharat Indic-Instruct conversations with every question synthesised to 16 kHz speech (158 GB, CC BY 4.0).</li>
-    <li><b>Training.</b> Joint training from the English weights was unstable, so stage 1 teaches Hindi from
-      102k text conversations and stage 2 trains the speech projector on 49,787 spoken questions (160 hours).
-      LoRA r = 128, α = 64, learning rate 1e-4 with cosine decay, bf16-mixed, about 29 GB of GPU memory per stage.</li>
-    <li><b>Results</b> against the base model: IndicQA F1 34% → 68%, perplexity 13.2 → 7.7, MT-Bench-Hi 3.5 → 4.6 out of 10,
-      IFEval-Hi 19.6% → 24.4%. Gains in question answering, writing and extraction; math and coding slightly worse.</li>
+    <li><b>Training.</b> Training was done in two stages: the first stage trains the LoRA adaptors on 102k
+      Hindi text conversations, and the second stage trains the speech adaptor on 49,787 spoken questions
+      (160 hours).</li>
+    <li><b>Results</b> against the base model: IndicQA (question answering) F1 34% → 68%,
+      <b>perplexity 13.2 → 7.7</b>; MT-Bench-Hi (conversation) 3.5 → 4.6 out of 10;
+      IFEval-Hi (instruction following) 19.6% → 24.4%. Gains in question answering, writing and
+      extraction; math and coding slightly worse.</li>
   </ul>
   <video controls preload="metadata" playsinline src="assets/hindi_llama_omni_demo.mp4"></video>
   <p class="caption">Gradio demo, sound on.</p>
 
   <h3>Stable Diffusion from scratch</h3>
   <p class="when">2025 · <a href="https://github.com/Asthag29/Stable_Diffusion">code</a></p>
-  <p class="tech">≈ 1.07 B parameters loaded · CLIP, VAE, U-Net, DDPM · 512² → 4×64×64 latents · 50 steps, CFG 7.5</p>
   <div class="inline">
     <div>
-      <p>
-        Every module of Stable Diffusion v1.5 reimplemented in PyTorch: the CLIP text encoder, VAE encoder and
-        decoder, U-Net with self- and cross-attention, and the DDPM sampler with the original 1,000-step schedule.
-        Without the compute to train it, I wrote a converter that loads the official checkpoint into my own modules.
-        Supports classifier-free guidance, image-to-image, and returning every denoising step.
-      </p>
+      <ul>
+        <li><b>Goal.</b> A learning implementation of the Stable Diffusion pipeline, written to understand
+          the architecture and the mathematics behind how noise turns into an image.</li>
+        <li><b>Approach.</b> I coded everything following Umar Jamil's repository. The main components of
+          the model are the CLIP text encoder, the VAE encoder and decoder, the U-Net denoiser with its
+          attention blocks, and DDPM sampling. Without the compute to train it, I loaded the pretrained
+          v1.5 weights into my implementation.</li>
+        <li>One of my most interesting and insightful projects, where everything I had
+          learnt (architectures, sampling techniques, embedding spaces) came together.</li>
+      </ul>
     </div>
     <video autoplay muted loop playsinline preload="metadata" src="assets/stable_diffusion_denoising.mp4"></video>
   </div>
@@ -129,24 +134,27 @@
   <h3>Fourier epicycles from any image</h3>
   <p class="when">2024 · <a href="https://huggingface.co/spaces/Pastaaaaa2003/Fourier_face">live demo</a> ·
     <a href="https://github.com/Asthag29/Fourier_Transformation">code</a></p>
-  <p class="tech">Canny → nearest-neighbour ordering → parametric spline → FFT · up to 2,000 edge points · FastAPI, OpenCV, SciPy, JS canvas</p>
-  <p>
-    Upload a picture and a chain of rotating circles redraws its outline. Edge points are ordered into a single
-    path, smoothed with a spline, encoded as z = x + iy and Fourier transformed; the largest frequencies become
-    the circles. Works well on cartoons and high-contrast images, less so on photographs.
-  </p>
+  <ul>
+    <li><b>Goal.</b> Most websites that show Fourier epicycles need you to draw the shape by hand or
+      supply an SVG file, and neither works well for real images. I wanted to extend the idea to real images.</li>
+    <li><b>How it works.</b> Four stages. Edge detection finds the boundaries in the image. A nearest-neighbour
+      traversal orders the scattered edge points into a single connected path. A spline smooths that path
+      and draws the outline of the image. A Fourier transform then turns the path into rotating circles.</li>
+    <li><b>Limitations.</b> It works reasonably well on cartoons, high-contrast images and portraits, but
+      falls apart on natural images. The fix would be to replace the edge-based approach with a
+      single-stroke tracing algorithm,(which I am looking into).</li>
+  </ul>
   <video muted loop autoplay playsinline preload="metadata" src="assets/fourier_shinchan.mp4"></video>
   <p class="caption">Shin-chan drawn from image edges.</p>
 
-  <h3>Smaller projects</h3>
+  <h3>Some older projects</h3>
   <ul>
     <li><a href="https://github.com/Asthag29/NANO_GPT">Decoder-only transformer</a> (2024). Character-level GPT
-      on Tiny Shakespeare, built up from a bigram baseline. <span class="small">≈ 10.8 M parameters, 6 layers, 6 heads, d = 384.</span></li>
-    <li><a href="https://github.com/Asthag29/NEURAL_NET_SCRATCH_OPTIMIZATION">Neural network and optimisers in NumPy</a> (2025).
-      Backpropagation by hand for a 784 → 16 → 10 MNIST network, with SGD with momentum, AdaGrad, RMSprop and Adam written from scratch.
-      <span class="small">RMSprop 93.7%, Adam 93.0% test accuracy.</span></li>
-    <li><a href="https://github.com/Asthag29/MNIST_CONVOLUTION2D">CNN for MNIST</a> (2025). Three convolutional and three
-      dense layers in PyTorch with a Typer command-line interface.</li>
+      on Tiny Shakespeare, built up from a bigram baseline.</li>
+    <li><a href="https://github.com/Asthag29/NEURAL_NET_SCRATCH_OPTIMIZATION">Backpropagation and optimisers in NumPy</a> (2025).
+      I wanted to understand the mathematics behind backpropagation and optimisation algorithms, so I
+      implemented everything and compared the performance of SGD with momentum, AdaGrad, RMSprop and Adam
+      on the MNIST dataset.</li>
   </ul>
 
   <h2>Education</h2>
@@ -157,8 +165,8 @@
   </ul>
 
   <h2>Skills</h2>
-  <p>PyTorch, PyTorch Lightning, Hugging Face, LoRA/PEFT, Hydra, Weights &amp; Biases, NumPy, OpenCV, FastAPI, Gradio; Python, R, JavaScript.</p>
-  <p>Languages: Hindi (native), English (fluent).</p>
+  <p>PyTorch, PyTorch Lightning, Hugging Face, LoRA/PEFT, Hydra, Weights &amp; Biases, NumPy, OpenCV, FastAPI, Gradio, Python, R, JavaScript.</p>
+  <p>Languages: Hindi, English.</p>
 
   <hr>
   <p class="footer">Astha Gupta · Munich</p>
