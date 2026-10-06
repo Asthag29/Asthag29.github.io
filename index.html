@@ -3,411 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Astha Gupta — MSc Statistics & Data Science, LMU Munich.">
   <title>Astha Gupta</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css">
+  <style>
+    body {
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      line-height: 1.55;
+      color: #111;
+      background: #fff;
+    }
+    a { color: #0645ad; }
+    a:visited { color: #0b0080; }
+    h1 { font-size: 30px; font-weight: normal; margin: 0 0 4px; }
+    h2 { font-size: 21px; font-weight: normal; margin: 40px 0 12px; padding-bottom: 4px; border-bottom: 1px solid #ccc; }
+    h3 { font-size: 17px; font-weight: bold; margin: 22px 0 4px; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0 0 12px 22px; padding: 0; }
+    li { margin-bottom: 4px; }
+    .header { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 8px; }
+    .header img { width: 120px; height: 120px; object-fit: cover; object-position: 50% 30%; flex-shrink: 0; }
+    .sub { color: #555; margin-bottom: 8px; }
+    .links a + a::before { content: " · "; color: #999; }
+    .when { color: #666; font-size: 15px; }
+    .small { font-size: 15px; color: #444; }
+    .tech { font-family: "Courier New", monospace; font-size: 14px; color: #444; margin: 2px 0 8px; }
+    video { display: block; max-width: 100%; margin: 8px 0 4px; border: 1px solid #ddd; }
+    .caption { font-size: 14px; color: #666; margin-bottom: 14px; }
+    .inline { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; }
+    .inline video { width: 180px; height: 180px; object-fit: cover; margin: 4px 0; }
+    .inline div { flex: 1 1 320px; }
+    hr { border: 0; border-top: 1px solid #ccc; margin: 40px 0 16px; }
+    .footer { font-size: 14px; color: #666; }
+    @media (max-width: 520px) { .header { flex-direction: column; } }
+  </style>
 </head>
 <body>
 
-  <div class="shell">
-
-    <aside class="sidebar">
-      <img src="image.png" alt="Astha Gupta" class="avatar" width="88" height="88">
-      <h1 class="name">Astha Gupta</h1>
-      <p class="role">
-        MSc Statistics &amp; Data Science<br>
-        Ludwig Maximilian University, Munich
+  <div class="header">
+    <img src="assets/portrait.jpg" alt="Astha Gupta">
+    <div>
+      <h1>Astha Gupta</h1>
+      <p class="sub">MSc Statistics &amp; Data Science, Ludwig Maximilian University of Munich</p>
+      <p class="links">
+        <a href="mailto:asthadu29@gmail.com">asthadu29@gmail.com</a><a href="https://github.com/Asthag29">GitHub</a><a href="https://huggingface.co/Pastaaaaa2003">Hugging Face</a><a href="https://www.linkedin.com/in/astha-gupta-772878219/">LinkedIn</a>
       </p>
-
-      <nav class="toc" aria-label="Sections">
-        <ul>
-          <li><a href="#about" class="active">About</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-        </ul>
-      </nav>
-
-      <ul class="contact">
-        <li><a href="mailto:asthadu29@gmail.com">asthadu29@gmail.com</a></li>
-        <li><a href="https://github.com/Asthag29" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/astha-gupta-772878219/" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
-    </aside>
-
-    <main class="content">
-
-      <section class="section" id="about">
-        <h2 class="section-label">About</h2>
-        <p class="prose prose-lead">
-          I started my degree in <strong>Data Science</strong> with zero idea of what it actually was.
-          Between multiple breakdowns and lectures, I slowly started enjoying it.
-        </p>
-        <p class="prose">
-          Now, I work at the university in the <strong>Mathematics and AI Department</strong>, build my
-          independent projects, and in my spare time experiment with makeup, fashion, and sewing.
-          I have won multiple state-level mathematics olympiads as a child, and recently, I was awarded with the
-          <strong>LMU SIST Completion Scholarship</strong>.
-        </p>
-      </section>
-
-      <section class="section" id="research">
-        <h2 class="section-label">Research interests</h2>
-        <p class="prose">
-          My research interests are pretty diverse, but mainly involve work at the intersection of
-          <strong>mathematics and machine learning</strong>. My current focus is in the domain of
-          <strong>computer vision</strong>, specifically <strong>generative modeling and diffusion models</strong>.
-          I also enjoy working on <strong>large language models</strong> and <strong>NLP</strong> tasks.
-          I am still exploring multiple directions, and would love to contribute to new ideas and projects.
-        </p>
-      </section>
-
-      <section class="section" id="experience">
-        <h2 class="section-label">Experience</h2>
-
-        <article class="entry">
-          <div class="entry-meta">
-            <time>Aug 2025 — Present</time>
-            <span>LMU Munich</span>
-          </div>
-          <div class="entry-body">
-            <h3 class="entry-title">Research Student</h3>
-            <p class="entry-org">
-              <a href="https://www.ai.math.uni-muenchen.de/index.html" target="_blank" rel="noopener">Chair of Mathematical Foundations of Artificial Intelligence</a>
-              <span class="entry-note">(<a href="https://en.wikipedia.org/wiki/Gitta_Kutyniok" target="_blank" rel="noopener">Professor Gitta Kutyniok</a>)</span>
-            </p>
-            <ul class="entry-list">
-              <li>Developing models which could improve the prediction of PDEs using diffusion models and neural operators.</li>
-              <li>Implementing uncertainty quantification methods to measure model confidence.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div class="entry-meta">
-            <time>Feb 2026 — Present</time>
-            <span>LMU Munich</span>
-          </div>
-          <div class="entry-body">
-            <h3 class="entry-title">Research Student</h3>
-            <p class="entry-org">
-              <a href="https://www.byzantinistik.uni-muenchen.de/forschung/projekte/probyz/nomos/index.html" target="_blank" rel="noopener">NOMOS Group</a>
-              <span class="entry-note">(Prof. Dr. Zachary Chitwood, Dr. Andreas Bender)</span>
-            </p>
-            <ul class="entry-list">
-              <li>Developing a machine learning pipeline which could transcribe texts from old Byzantine Greek manuscripts using OCR and vision language models.</li>
-            </ul>
-          </div>
-        </article>
-      </section>
-
-      <section class="section" id="projects">
-        <h2 class="section-label">Projects</h2>
-
-        <article class="entry">
-          <div class="entry-meta">
-            <time>Jan 2025 — Present</time>
-            <span>Munich, Germany</span>
-          </div>
-          <div class="entry-body">
-            <h3 class="entry-title">
-              <a href="https://github.com/Asthag29/Stable_Diffusion" target="_blank" rel="noopener">Stable Diffusion Model</a>
-            </h3>
-            <p class="entry-tag">Self learning purpose</p>
-            <ul class="entry-list">
-              <li><strong>Objective:</strong> Implemented stable diffusion model from scratch to understand underlying mechanics and architecture.</li>
-              <li><strong>Learnings:</strong> Gained deep understanding of DDPM and DDIM samplers, along with comprehensive knowledge of CLIP and autoencoding architectures.</li>
-            </ul>
-
-            <figure class="clip">
-              <video
-                class="clip-video"
-                src="stable_diffusion_demo.mp4"
-                width="200"
-                height="200"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                aria-label="Stable Diffusion denoising an image step by step"
-              ></video>
-              <figcaption class="clip-caption">
-                Denoising process: the image emerges from pure noise step by step.
-              </figcaption>
-            </figure>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div class="entry-meta">
-            <time>Oct 2025 — Present</time>
-            <span>Munich, Germany</span>
-          </div>
-          <div class="entry-body">
-            <h3 class="entry-title">
-              <a href="https://github.com/Asthag29/llama_omni_hindi_" target="_blank" rel="noopener">Hindi Llama Omni Model</a>
-            </h3>
-            <p class="entry-tag">
-              Applied deep learning project
-              <span class="entry-note">(Professor Mina Rezaei)</span>
-            </p>
-            <ul class="entry-list">
-              <li><strong>Objective:</strong> Building a Hindi speech-to-speech model inspired by the architecture of the Llama Omni model.</li>
-              <li><strong>Learnings:</strong> The goal is to build a system which could understand and talk back to the user in Hindi, with the main focus on reducing latency.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div class="entry-meta">
-            <time>Jun 2024 — Sep 2024</time>
-            <span>Munich, Germany</span>
-          </div>
-          <div class="entry-body">
-            <h3 class="entry-title">
-              <a href="https://github.com/Asthag29/Transformer_Architecture" target="_blank" rel="noopener">Transformer Architecture</a>
-            </h3>
-            <p class="entry-tag">Theory focused project</p>
-            <ul class="entry-list">
-              <li><strong>Objective:</strong> Coded transformer architecture to understand its major components including self-attention, cross-attention, encoder-decoder mechanisms, etc.</li>
-              <li><strong>Learnings:</strong> Understood the mathematics behind the transformer architecture and wrote detailed explanations for each component in the repository.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div class="entry-meta">
-            <time>Feb 2024 — May 2024</time>
-            <span>Munich, Germany</span>
-          </div>
-          <div class="entry-body">
-            <h3 class="entry-title">
-              <a href="https://github.com/Asthag29/Fourier_Transformation" target="_blank" rel="noopener">Drawing Sketches using Fourier Transformation</a>
-            </h3>
-            <p class="entry-tag">
-              Inspired by
-              <a href="https://www.jezzamon.com/fourier/" target="_blank" rel="noopener">jezzamon.com/fourier</a>;
-              extended for human sketches
-            </p>
-            <ul class="entry-list">
-              <li><strong>Objective:</strong> Developed end-to-end pipeline for drawing contours of human faces using Fourier Transformation.</li>
-              <li><strong>Learnings:</strong> Applied edge detection techniques, parametric spline fitting, Fourier Transformation, and JavaScript for frontend development.</li>
-              <li><strong>Live demo:</strong> <a href="https://astha-fourier.netlify.app/" target="_blank" rel="noopener">astha-fourier.netlify.app</a></li>
-            </ul>
-
-            <figure class="showcase" id="fourier-demo">
-              <div class="showcase-bar">
-                <span class="showcase-label">Fourier epicycles in action</span>
-                <button
-                  type="button"
-                  class="showcase-toggle"
-                  aria-pressed="false"
-                  aria-label="Pause demo video"
-                >Pause</button>
-              </div>
-              <video
-                class="showcase-video"
-                src="New_shinchan.mp4"
-                muted
-                loop
-                playsinline
-                webkit-playsinline
-                preload="auto"
-                aria-label="Shinchan contour animation drawn with Fourier epicycles"
-              ></video>
-              <figcaption class="showcase-caption">
-                Shinchan drawn from image edges using rotating epicycles ·
-                <a href="https://github.com/Asthag29/Fourier_Transformation" target="_blank" rel="noopener">view on GitHub</a>
-              </figcaption>
-            </figure>
-          </div>
-        </article>
-      </section>
-
-      <section class="section" id="education">
-        <h2 class="section-label">Education</h2>
-
-        <article class="entry">
-          <div class="entry-meta">
-            <time>2024 — Present</time>
-            <span>Munich, Germany</span>
-          </div>
-          <div class="entry-body">
-            <h3 class="entry-title">Masters in Statistics &amp; Data Science</h3>
-            <p class="entry-org">Ludwig Maximilian University</p>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div class="entry-meta">
-            <time>2021 — 2024</time>
-            <span>New Delhi, India</span>
-          </div>
-          <div class="entry-body">
-            <h3 class="entry-title">Bachelor of Science in Statistics (Honours)</h3>
-            <p class="entry-org">University of Delhi</p>
-            <p class="entry-detail"><strong>CGPA:</strong> 8.546</p>
-            <p class="entry-detail">Placed 3rd in my batch</p>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div class="entry-meta">
-            <time>2018 — 2021</time>
-            <span>New Delhi, India</span>
-          </div>
-          <div class="entry-body">
-            <h3 class="entry-title">High School</h3>
-            <p class="entry-org">St. Joseph Academy</p>
-            <p class="entry-detail"><strong>Percentage:</strong> 96%</p>
-          </div>
-        </article>
-      </section>
-
-      <section class="section" id="skills">
-        <h2 class="section-label">Technical skills</h2>
-
-        <div class="skills">
-          <div class="skills-group">
-            <h3 class="skills-category">Machine learning &amp; AI</h3>
-            <ul class="skills-list">
-              <li>Large language models &amp; generative AI</li>
-              <li>Neural networks &amp; deep learning</li>
-              <li>Theoretical deep learning</li>
-              <li>Diffusion models</li>
-              <li>Computer vision</li>
-            </ul>
-          </div>
-
-          <div class="skills-group">
-            <h3 class="skills-category">Programming</h3>
-            <ul class="skills-list">
-              <li>Python</li>
-              <li>R</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
-
-          <div class="skills-group">
-            <h3 class="skills-category">Mathematics</h3>
-            <ul class="skills-list">
-              <li>Optimization</li>
-              <li>Mathematical statistics</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="languages">
-        <h2 class="section-label">Languages</h2>
-        <ul class="languages">
-          <li><span class="lang-name">English</span><span class="lang-level">Fluent</span></li>
-          <li><span class="lang-name">Hindi</span><span class="lang-level">Native</span></li>
-        </ul>
-      </section>
-
-      <footer class="site-footer">
-        <p>Astha Gupta · Munich, Germany</p>
-      </footer>
-
-    </main>
+    </div>
   </div>
 
-  <script>
-    (function () {
-      var links = document.querySelectorAll(".toc a");
-      var sections = Array.prototype.map.call(links, function (link) {
-        return document.querySelector(link.getAttribute("href"));
-      });
+  <p>
+    I am a master's student in Statistics and Data Science at LMU Munich. I have been exploring several
+    domains: I have worked with diffusion models, neural operators, OCR, and language models. My current
+    interest is leaning towards audio and speech modelling.
+  </p>
 
-      var ticking = false;
+  <h2>Work</h2>
 
-      function update() {
-        ticking = false;
-        var line = window.innerHeight * 0.3;
-        var current = 0;
-        sections.forEach(function (section, i) {
-          if (section && section.getBoundingClientRect().top <= line) current = i;
-        });
-        links.forEach(function (link, i) {
-          link.classList.toggle("active", i === current);
-        });
-      }
+  <h3>Research student, <a href="https://www.ai.math.uni-muenchen.de/index.html">Chair of Mathematical Foundations of Artificial Intelligence</a>, LMU Munich</h3>
+  <p class="when">August 2025 – present ·
+    <a href="https://www.math.lmu.de/~kutyniok/">Prof. Gitta Kutyniok</a>,
+    supervised by <a href="https://cbuelt.github.io">Christopher Bülte</a></p>
+  <p>
+    Combining diffusion models with neural operators to improve the prediction of PDE solutions, and
+    implementing uncertainty quantification so the model reports its confidence alongside the prediction.
+  </p>
 
-      window.addEventListener("scroll", function () {
-        if (!ticking) {
-          ticking = true;
-          requestAnimationFrame(update);
-        }
-      }, { passive: true });
-      window.addEventListener("load", update);
-      update();
-    })();
+  <h3>Research student, <a href="https://www.byzantinistik.uni-muenchen.de/forschung/projekte/probyz/nomos/index.html">NOMOS Group</a>, LMU Munich</h3>
+  <p class="when">February 2026 – present ·
+    <a href="https://www.kw.lmu.de/byz/de/personen/kontaktseite/zachary-chitwood-e1b99c14.html">Prof. Dr. Zachary Chitwood</a>,
+    <a href="https://www.cas.lmu.de/de/personen-am-cas/details/andreas-bender-fcbcf64c.html">Dr. Andreas Bender</a></p>
+  <p>
+    Building a small OCR model that transcribes medieval handwritten text in Greek, Syriac, Coptic, and
+    Armenian. The current model has under 3M parameters and reaches state-of-the-art or comparable
+    performance against the best available models.
+  </p>
+  <ul class="small">
+    <li>Application: <a href="https://www.nomikos.app">nomikos.app</a></li>
+    <li>GitHub: <a href="https://github.com/kkkamur07/nomikos">github.com/kkkamur07/nomikos</a></li>
+    <li>Hugging Face: <a href="https://huggingface.co/nomikos-project">huggingface.co/nomikos-project</a></li>
+  </ul>
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      document.querySelectorAll("video[autoplay]").forEach(function (video) {
-        video.pause();
-        video.controls = true;
-      });
-    }
+  <h2>Projects</h2>
 
-    (function () {
-      var showcase = document.getElementById("fourier-demo");
-      if (!showcase) return;
+  <h3>Hindi LLaMA-Omni: a Hindi speech-to-speech assistant</h3>
+  <p class="when">October 2025 – October 2026 · Applied deep learning project with Prof. Mina Rezaei ·
+    <a href="https://github.com/Asthag29/llama_omni_hindi_">code</a> ·
+    <a href="https://huggingface.co/Pastaaaaa2003/hindi-llama-omni-model">model</a> ·
+    <a href="https://huggingface.co/datasets/Pastaaaaa2003/Hindi-speech-instruct">dataset</a></p>
+  <p class="tech">1× A100 80 GB · 9.02 B parameters, 357 M trained · 35–40 hours of training</p>
+  <p>
+    An audio chatbot for the Hindi language. The recipe has three main ingredients: a speech encoder
+    (Whisper large-v3), a speech adaptor that learns the correspondence between speech tokens and text
+    tokens, and a backbone language model (Llama 3.1 8B). The model is built on top of LLaMA-Omni.
+  </p>
+  <ul>
+    <li><b>Dataset.</b> No spoken-Hindi instruction data existed, so I built Hindi-speech-instruct: 110,700
+      AI4Bharat Indic-Instruct conversations with every question synthesised to 16 kHz speech (158 GB, CC BY 4.0).</li>
+    <li><b>Training.</b> Joint training from the English weights was unstable, so stage 1 teaches Hindi from
+      102k text conversations and stage 2 trains the speech projector on 49,787 spoken questions (160 hours).
+      LoRA r = 128, α = 64, learning rate 1e-4 with cosine decay, bf16-mixed, about 29 GB of GPU memory per stage.</li>
+    <li><b>Results</b> against the base model: IndicQA F1 34% → 68%, perplexity 13.2 → 7.7, MT-Bench-Hi 3.5 → 4.6 out of 10,
+      IFEval-Hi 19.6% → 24.4%. Gains in question answering, writing and extraction; math and coding slightly worse.</li>
+  </ul>
+  <video controls preload="metadata" playsinline src="assets/hindi_llama_omni_demo.mp4"></video>
+  <p class="caption">Gradio demo, sound on.</p>
 
-      var video = showcase.querySelector(".showcase-video");
-      var toggle = showcase.querySelector(".showcase-toggle");
-      var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      var paused = false;
+  <h3>Stable Diffusion from scratch</h3>
+  <p class="when">2025 · <a href="https://github.com/Asthag29/Stable_Diffusion">code</a></p>
+  <p class="tech">≈ 1.07 B parameters loaded · CLIP, VAE, U-Net, DDPM · 512² → 4×64×64 latents · 50 steps, CFG 7.5</p>
+  <div class="inline">
+    <div>
+      <p>
+        Every module of Stable Diffusion v1.5 reimplemented in PyTorch: the CLIP text encoder, VAE encoder and
+        decoder, U-Net with self- and cross-attention, and the DDPM sampler with the original 1,000-step schedule.
+        Without the compute to train it, I wrote a converter that loads the official checkpoint into my own modules.
+        Supports classifier-free guidance, image-to-image, and returning every denoising step.
+      </p>
+    </div>
+    <video autoplay muted loop playsinline preload="metadata" src="assets/stable_diffusion_denoising.mp4"></video>
+  </div>
 
-      function setPlaying(playing) {
-        paused = !playing;
-        if (playing) {
-          video.play().catch(function () {});
-          toggle.textContent = "Pause";
-          toggle.setAttribute("aria-label", "Pause demo video");
-        } else {
-          video.pause();
-          toggle.textContent = "Play";
-          toggle.setAttribute("aria-label", "Play demo video");
-        }
-        toggle.setAttribute("aria-pressed", String(paused));
-      }
+  <h3>Fourier epicycles from any image</h3>
+  <p class="when">2024 · <a href="https://huggingface.co/spaces/Pastaaaaa2003/Fourier_face">live demo</a> ·
+    <a href="https://github.com/Asthag29/Fourier_Transformation">code</a></p>
+  <p class="tech">Canny → nearest-neighbour ordering → parametric spline → FFT · up to 2,000 edge points · FastAPI, OpenCV, SciPy, JS canvas</p>
+  <p>
+    Upload a picture and a chain of rotating circles redraws its outline. Edge points are ordered into a single
+    path, smoothed with a spline, encoded as z = x + iy and Fourier transformed; the largest frequencies become
+    the circles. Works well on cartoons and high-contrast images, less so on photographs.
+  </p>
+  <video muted loop autoplay playsinline preload="metadata" src="assets/fourier_shinchan.mp4"></video>
+  <p class="caption">Shin-chan drawn from image edges.</p>
 
-      if (reducedMotion) {
-        video.controls = true;
-        toggle.hidden = true;
-        return;
-      }
+  <h3>Smaller projects</h3>
+  <ul>
+    <li><a href="https://github.com/Asthag29/NANO_GPT">Decoder-only transformer</a> (2024). Character-level GPT
+      on Tiny Shakespeare, built up from a bigram baseline. <span class="small">≈ 10.8 M parameters, 6 layers, 6 heads, d = 384.</span></li>
+    <li><a href="https://github.com/Asthag29/NEURAL_NET_SCRATCH_OPTIMIZATION">Neural network and optimisers in NumPy</a> (2025).
+      Backpropagation by hand for a 784 → 16 → 10 MNIST network, with SGD with momentum, AdaGrad, RMSprop and Adam written from scratch.
+      <span class="small">RMSprop 93.7%, Adam 93.0% test accuracy.</span></li>
+    <li><a href="https://github.com/Asthag29/MNIST_CONVOLUTION2D">CNN for MNIST</a> (2025). Three convolutional and three
+      dense layers in PyTorch with a Typer command-line interface.</li>
+  </ul>
 
-      if ("IntersectionObserver" in window) {
-        new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting && !paused) {
-                video.muted = true;
-                video.play().catch(function () {});
-              } else if (!entry.isIntersecting) {
-                video.pause();
-              }
-            });
-          },
-          { threshold: 0.35 }
-        ).observe(showcase);
-      } else {
-        video.play().catch(function () {});
-      }
+  <h2>Education</h2>
+  <ul>
+    <li><b>MSc Statistics &amp; Data Science</b>, LMU Munich, 2024 – present. LMU SIST Completion Scholarship.</li>
+    <li><b>BSc Statistics (Honours)</b>, University of Delhi, 2021 – 2024. CGPA 8.546, 3rd in batch.</li>
+    <li><b>High school</b>, St. Joseph Academy, New Delhi, 2018 – 2021. 96%.</li>
+  </ul>
 
-      toggle.addEventListener("click", function () {
-        setPlaying(paused);
-      });
-    })();
-  </script>
+  <h2>Skills</h2>
+  <p>PyTorch, PyTorch Lightning, Hugging Face, LoRA/PEFT, Hydra, Weights &amp; Biases, NumPy, OpenCV, FastAPI, Gradio; Python, R, JavaScript.</p>
+  <p>Languages: Hindi (native), English (fluent).</p>
+
+  <hr>
+  <p class="footer">Astha Gupta · Munich · <a href="styled.html">styled version</a></p>
+
 </body>
 </html>
